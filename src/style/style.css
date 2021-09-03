@@ -1,0 +1,334 @@
+*,
+::before,
+::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+:root {
+  --box-primary-color: hsl(240, 78%, 98%);
+  --toggle-button-text: hsl(234, 14%, 74%);
+  --background-color: hsl(240, 78%, 98%);
+  --box-secondaru-color: hsl(232, 13%, 33%);
+  --cta-text-color: hsl(233, 13%, 49%);
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.top-img {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: -1;
+}
+.buttom-img {
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  z-index: -1;
+}
+
+.plan-btn {
+  width: 2.7rem;
+  height: 1.6rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 2rem;
+  outline: none;
+  border: none;
+
+  padding-left: 0.26rem;
+  cursor: pointer;
+}
+
+.plan-btn:hover {
+  background: linear-gradient(
+    to right,
+    hsla(236, 72%, 79%, 0.705),
+    hsla(237, 63%, 64%, 0.781)
+  );
+}
+
+.plan-btn::before {
+  content: " ";
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: rgb(255, 255, 255);
+}
+.plan-btn.clicked::before {
+  transform: translate(75%);
+}
+
+.plan {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.plan > span {
+  font-size: 0.87rem;
+  color: var(--toggle-button-text);
+}
+.header-text {
+  font-size: 1.5rem;
+  color: var(--cta-text-color);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+header * {
+  margin-top: 1rem;
+}
+
+section {
+  display: grid;
+  place-items: center;
+}
+
+.professional_card {
+  width: 18rem;
+  height: 25rem;
+  border-radius: 0.6rem;
+  background-image: linear-gradient(
+    145deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+  padding-bottom: 2.5rem;
+}
+.card-info > span {
+  color: var(--box-primary-color);
+  font-size: 0.8rem;
+}
+
+.card-title {
+  color: var(--box-primary-color);
+}
+
+.price.pro {
+  color: var(--box-primary-color);
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 2%;
+}
+.price.pro::before {
+  content: "$";
+  font-size: 2rem;
+  margin-right: 0.3rem;
+}
+
+.master_card {
+  height: 22.5rem;
+  width: 18rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0rem 0.6rem 0.6rem 0rem;
+  box-shadow: 2px 0px 35px 5px rgba(0, 0, 0, 0.034);
+}
+.card_container {
+  margin-top: 3.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.storage {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 0.8rem 0;
+}
+.users {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  width: 90%;
+  padding: 0.8rem 0;
+  margin: 0 auto;
+}
+.send {
+  width: 90%;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  width: 90%;
+  padding: 0.8rem 0;
+  margin: 0 auto;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 35%;
+  width: 90%;
+  position: relative;
+  bottom: 5%;
+}
+
+.pro-card-cta-btn {
+  width: 83%;
+  outline: none;
+  border: none;
+  background-color: var(--box-primary-color);
+  height: 2.4rem;
+  color: hsl(237, 63%, 64%);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  border-radius: 0.33rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.pro-card-cta-btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--box-primary-color);
+  border: 1px solid var(--box-primary-color);
+}
+
+.storage.basic,
+.storage.master {
+  width: 85%;
+  color: var(--cta-text-color);
+  margin: 0 auto;
+  border-top: 1px solid rgba(100, 100, 100, 0.212);
+  border-bottom: 1px solid rgba(100, 100, 100, 0.212);
+  padding: 0.8rem 0;
+}
+.users.basic,
+.users.master {
+  width: 85%;
+  color: var(--cta-text-color);
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.212);
+  padding: 0.8rem 0;
+}
+
+.send.basic,
+.send.master {
+  width: 85%;
+  color: var(--cta-text-color);
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.212);
+  padding: 0.8rem 0;
+}
+
+.price.basic,
+.price.master {
+  color: var(--box-secondaru-color);
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 2%;
+}
+.price.basic::before {
+  content: "$";
+  font-size: 2rem;
+  margin-right: 0.3rem;
+}
+.price.master::before {
+  content: "$";
+  font-size: 2rem;
+  margin-right: 0.3rem;
+}
+.card-title.basic,
+.card-title.master {
+  color: var(--box-secondaru-color);
+}
+.basic_card,
+.master_card {
+  height: 22.5rem;
+  width: 18rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.6rem 0rem 0rem 0.6rem;
+  box-shadow: -2px 0px 35px 5px rgba(0, 0, 0, 0.034);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0rem 1.5rem 0rem;
+}
+
+.basic-card-cta-btn,
+.master-card-cta-btn {
+  color: white;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  outline: none;
+  border: none;
+  width: 83%;
+  height: 2.3rem;
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  border-radius: 0.33rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.basic-card-cta-btn:hover {
+  background: rgba(255, 255, 255, 0);
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+}
+.master-card-cta-btn:hover {
+  background: rgba(255, 255, 255, 0);
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(237, 63%, 64%);
+}
+
+@media screen and (max-width: 960px) {
+  .card_container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .basic_card,
+  .professional_card,
+  .master_card {
+    width: 27rem;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .basic_card,
+  .professional_card,
+  .master_card {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .basic_card,
+  .professional_card,
+  .master_card {
+    width: 17rem;
+  }
+}
+
+.icon {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 2rem;
+}
